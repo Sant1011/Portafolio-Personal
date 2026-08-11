@@ -1,4 +1,4 @@
 # Portafolio-Personal
 Buenas practicas de desarrollo de software
 
-Santiago Zambrano -- Yhaisell Marquez -- Joshua Werminsky
+Yhaisell Marquez -- Joshua Werminsky -- Santiago Zambrano 
