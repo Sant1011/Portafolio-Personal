@@ -97,6 +97,58 @@ span{
     margin: 25px 0 30px;
 
 }
+.btnmodo{
+    background: transparent;
+    border: 2px solid crimson;
+    color: white;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 0.3s ease;
+
+}
+
+.btnmodo :hover{
+    background-color: crimson;
+    box-shadow: 0 0 15px black;
+}
+
+body.modo-claro .home{
+    background-color: #111111;
+    color: white;
+}
+ 
+body.modo-claro .home-content h1,
+body.modo-claro .home-content h3,
+body.modo-claro .home-content p{
+    color: white;
+}
+
+body.modo-claro .contact-form{
+    background-color: #111111;
+    color: white;
+}
+
+body.modo-claro .contact-form h1,
+body.modo-claro .contact-form h3,
+body.modo-claro .contact-form p{
+    color: white;
+}
+
+body.modo-claro .contact{
+    background-color: #111111;
+    color: white;
+}
+
+body.modo-claro .contact h1,
+body.modo-claro .contact h3,
+body.modo-claro .contact p{
+    color: white;
+}
+
 .btn-box{
     width: 345px;
     display: flex;
