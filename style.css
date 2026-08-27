@@ -67,8 +67,14 @@ span{
 .contact:hover{
     background-color: crimson;
     box-shadow: 0 0 25px crimson;
-    color: whitesmoke;
+    color: white;
 }
+
+.ahora{
+    color: black;
+}
+
+
 .home{
     width: 100%;
     min-height: 100vh;
@@ -128,7 +134,7 @@ body.modo-claro .home-content p{
 }
 
 body.modo-claro .contact-form{
-    background-color: #111111;
+    background-color: #000000;
     color: white;
 }
 
@@ -139,7 +145,7 @@ body.modo-claro .contact-form p{
 }
 
 body.modo-claro .contact{
-    background-color: #111111;
+    background-color: #000000;
     color: white;
 }
 
@@ -147,6 +153,15 @@ body.modo-claro .contact h1,
 body.modo-claro .contact h3,
 body.modo-claro .contact p{
     color: white;
+}
+
+body.modo-claro .ahora{
+    background-color: #000000;
+    color: white;
+}
+
+body.modo-claro .ahora{
+    color: crimson;
 }
 
 .btn-box{
@@ -252,6 +267,7 @@ body.modo-claro .contact p{
     text-align: center;
     margin-bottom: 3em;
 }
+
 .contact-form form .input-box{
     display: flex;
     justify-content: center;
