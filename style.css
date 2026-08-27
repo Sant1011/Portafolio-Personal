@@ -97,7 +97,7 @@ span{
     margin: 25px 0 30px;
 
 }
-.btnmodo{
+.btnModo{
     background: transparent;
     border: 2px solid crimson;
     color: white;
@@ -111,7 +111,7 @@ span{
 
 }
 
-.btnmodo :hover{
+.btnModo :hover{
     background-color: crimson;
     box-shadow: 0 0 15px black;
 }
