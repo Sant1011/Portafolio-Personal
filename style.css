@@ -270,6 +270,25 @@ body.modo-claro .contact p{
     resize: none;
 }
 
+.btn-f{
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-f:hover{
+    background-color: black;
+    color: crimson;
+
+}
+
 .footer{
     position: relative;
     bottom: 0;
