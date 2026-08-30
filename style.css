@@ -67,8 +67,14 @@ span{
 .contact:hover{
     background-color: crimson;
     box-shadow: 0 0 25px crimson;
-    color: whitesmoke;
+    color: white;
 }
+
+.ahora{
+    color: black;
+}
+
+
 .home{
     width: 100%;
     min-height: 100vh;
@@ -97,6 +103,67 @@ span{
     margin: 25px 0 30px;
 
 }
+.btnModo{
+    background: transparent;
+    border: 2px solid crimson;
+    color: white;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 0.3s ease;
+
+}
+
+.btnModo :hover{
+    background-color: crimson;
+    box-shadow: 0 0 15px black;
+}
+
+body.modo-claro .home{
+    background-color: #111111;
+    color: white;
+}
+ 
+body.modo-claro .home-content h1,
+body.modo-claro .home-content h3,
+body.modo-claro .home-content p{
+    color: white;
+}
+
+body.modo-claro .contact-form{
+    background-color: #000000;
+    color: white;
+}
+
+body.modo-claro .contact-form h1,
+body.modo-claro .contact-form h3,
+body.modo-claro .contact-form p{
+    color: white;
+}
+
+body.modo-claro .contact{
+    background-color: #000000;
+    color: white;
+}
+
+body.modo-claro .contact h1,
+body.modo-claro .contact h3,
+body.modo-claro .contact p{
+    color: white;
+}
+
+body.modo-claro .ahora{
+    background-color: #000000;
+    color: white;
+}
+
+body.modo-claro .ahora{
+    color: crimson;
+}
+
 .btn-box{
     width: 345px;
     display: flex;
@@ -200,6 +267,7 @@ span{
     text-align: center;
     margin-bottom: 3em;
 }
+
 .contact-form form .input-box{
     display: flex;
     justify-content: center;
@@ -216,6 +284,25 @@ span{
     border-radius: .8rem;
     margin: 1rem 0;
     resize: none;
+}
+
+.btn-f{
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-f:hover{
+    background-color: black;
+    color: crimson;
+
 }
 
 .footer{

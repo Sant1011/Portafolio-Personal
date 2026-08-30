@@ -1,14 +1,13 @@
 # Portafolio-Personal
-##Buenas practicas de desarrollo de software
+#Buenas Practicas de Desarrollo de Software
 
 Yhaisell Marquez -- Joshua Werminsky -- Santiago Zambrano 
 
-##¿Proposito?
+#¿Proposito?
 
-Servir como carta de presentacion digital de un desarrollador de software Full Stack, para mostrar su experiencia y proyectos,
-generando contactos con clientes o empleadores potecniales.
+Actuar como portafolio digital para exhibir la trayectoria técnica y proyectos de un desarrollador Full Stack, facilitando el enlace profesional con clientes y reclutadores de la industria.
 
-##Funcionalidades
+#Funcionalidades
 
 -Presentacion personal
 -Botones de accion
