@@ -36,9 +36,6 @@
     transform: scale(1.1);
 }
 
-span{
-    color: crimson;
-}
 .navbar a{
     font-size: 18px;
     color: white;
@@ -117,7 +114,7 @@ span{
 
 }
 
-.btnModo :hover{
+.btnModo:hover{
     background-color: crimson;
     box-shadow: 0 0 15px black;
 }
@@ -157,10 +154,6 @@ body.modo-claro .contact p{
 
 body.modo-claro .ahora{
     background-color: #000000;
-    color: white;
-}
-
-body.modo-claro .ahora{
     color: crimson;
 }
 
@@ -210,14 +203,13 @@ body.modo-claro .ahora{
     width: 350px;
 }
 ::-webkit-scrollbar{
-    width: 15px;
+    width: 10px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: crimson;
 }
 ::-webkit-scrollbar-track{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .about{
