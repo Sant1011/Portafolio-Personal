@@ -15,3 +15,8 @@ Actuar como portafolio digital para exhibir la trayectoria técnica y proyectos 
 -Formulario de contacto
 -Footer interactivo 
 
+## Despliegue en AWS
+
+| Integrante | URL del sitio | Bucket público | Bucket privado |
+|---|---|---|---|
+| yhaisell | [Visitar sitio web](http://cuc-bp-eqym-marquez-sitio2026.s3-website-us-east-1.amazonaws.com) | `cuc-bp-eqym-marquez-sitio2026` | `cuc-bp-eqym-marquez-privado-2026` |
