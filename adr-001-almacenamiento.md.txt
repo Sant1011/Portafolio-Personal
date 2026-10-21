@@ -44,6 +44,8 @@ de $0,24 (67%).
 ### Costos o desventajas que aceptamos
 -Recuperar un archivo desde Glacier es lento. Se acepta porque solo pasan allí archivos que casi no se consultan.
 -El ahorro en dinero es pequeño porque el portafolio pesa muy pocos GB.
+-Un solo bucket publico para todo se descarto porque cualquier dato sensible (mensajes del formulario, documentacion interna)
+quedaría expuesto a cualquiera que conozca la URL.
 
 ### Que habria que revisar mas adelante
 -Si el proyecto crece o el formulario empieza a guardar mensajes, revisar los plazos de 30 y 90 días y los permisos
