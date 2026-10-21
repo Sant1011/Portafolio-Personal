@@ -1,0 +1,53 @@
+# ADR-001: Diseño del almacenamiento del proyecto en Amazon S3
+
+- Fecha: 20/10/2026
+- Autor: Santiago Zambrano 
+- Estado: Aceptada
+
+## Contexto
+El proyecto es un portafolio personal estático (index.html, style.css, back.js e imágenes en img/) 
+que debe estar disponible para cualquier visitante. Antes de este diseño, el contenido no tenía una 
+estructura de almacenamiento definida: había un bucket privado con solo un archivo de prueba. Un bucket
+privado no sirve para publicar el sitio, porque el navegador recibiría error 403 al pedir los archivos.
+El problema era decidir qué datos son públicos y cuáles privados, y evitar exponer información por error.
+
+## Decision
+-Dos buckets: uno público para el sitio y uno privado para datos internos.
+
+-Bucket público: contiene index.html, style.css, back.js y las imágenes, con lectura pública solo para el 
+prefijo del sitio.
+
+-Bucket privado: sin acceso público, acceso solo para el equipo. Guarda la documentación interna
+(README.md) y, si el formulario llega a guardar mensajes, esos datos personales.
+
+-Prefijos: se separan los datos por prefijo para aplicar permisos y reglas a grupos completos
+ de archivos.
+
+-Versionado: activado en el bucket del sitio, para poder revertir un archivo dañado.
+-Regla de ciclo de vida (retencion-sitio, aplicada a todos los objetos del bucket): pasar a Standard-IA a los 
+30 días, a Glacier a los 90 días, y eliminar las versiones no vigentes a los 30 días.
+
+## Alternativas consideradas
+-Un solo bucket privado con acceso controlado. Se descartó porque el sitio necesita ser público y complicaría
+la entrega de archivos estáticos, que el navegador debe poder pedir sin autenticarse.
+
+-Archivos sueltos en la raíz, sin prefijos. Se descartó porque obligaría a configurar permisos archivo por 
+archivo, y olvidar uno podría dejar datos privados expuestos.
+
+## Consecuencias
+### Positivas
+-Los datos privados quedan separados de lo público, lo que reduce el riesgo de exposición.
+-Se pueden revertir errores durante 30 días gracias al versionado.
+-La regla funciona: la calculadora de AWS estimó $0,36 al año sin regla y $0,12 con la regla, un ahorro 
+de $0,24 (67%).
+
+### Costos o desventajas que aceptamos
+-Recuperar un archivo desde Glacier es lento. Se acepta porque solo pasan allí archivos que casi no se consultan.
+-El ahorro en dinero es pequeño porque el portafolio pesa muy pocos GB.
+
+### Que habria que revisar mas adelante
+-Si el proyecto crece o el formulario empieza a guardar mensajes, revisar los plazos de 30 y 90 días y los permisos
+del bucket privado.
+-Confirmar que los archivos que el navegador usa a diario (index.html, style.css, back.js, imágenes) no queden 
+en Glacier, ya que el sitio dejaría de cargar.
+-Volver a estimar el costo con el tamaño real del bucket.
